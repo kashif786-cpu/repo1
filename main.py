@@ -6,24 +6,22 @@ class Student:
         self.age = age
         self.marks = marks
 
-    # Display student details
     def display(self):
-        print("\n----- Student Details -----")
         print("Roll Number:", self.roll_no)
         print("Name:", self.name)
         print("Age:", self.age)
         print("Marks:", self.marks)
 
 
-# List to store student objects
+
 students = []
 
 
-# 1. Add Student
+
 def add_student():
     roll_no = int(input("Enter roll number: "))
 
-    # Check duplicate roll number
+    
     for student in students:
         if student.roll_no == roll_no:
             print("Roll number already exists!")
@@ -39,7 +37,7 @@ def add_student():
     print("Student added successfully!")
 
 
-# 2. View All Students
+
 def view_students():
     if len(students) == 0:
         print("No students found!")
@@ -48,7 +46,7 @@ def view_students():
             student.display()
 
 
-# 3. Search Student
+
 def search_student():
     roll = int(input("Enter roll number to search: "))
 
@@ -61,7 +59,7 @@ def search_student():
     print("Student not found!")
 
 
-# 4. Delete Student
+
 def delete_student():
     roll = int(input("Enter roll number to delete: "))
 
@@ -74,7 +72,7 @@ def delete_student():
     print("Student not found!")
 
 
-# 5. Update Student Marks
+
 def update_student():
     roll = int(input("Enter roll number: "))
 
@@ -89,9 +87,8 @@ def update_student():
     print("Student not found!")
 
 
-# Main Menu
+
 while True:
-    print("\n===== STUDENT MANAGEMENT SYSTEM =====")
     print("1. Add Student")
     print("2. View All Students")
     print("3. Search Student")
